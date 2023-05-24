@@ -1,0 +1,465 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0px;
+    padding: 0px;
+}
+/* ヘッダー */
+header {
+    background-color: #f4f4f4;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #logo {
+    margin-left: 1%;
+}
+
+header nav ul{
+    list-style: none;
+    margin:0px;
+    padding:0px;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    padding:10px 30px;
+    margin:2.5px;
+    color:black;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+header nav ul li:last-child a {
+    background-color: #000;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 32px;
+}
+
+header nav ul li:last-child a:hover {
+    background-color: #333;
+}
+
+/* セクション */
+section {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#Home_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 画面の高さに合わせる */
+}
+
+#Home_image .relative {
+    position: relative;
+}
+
+#Home_image img {
+    max-width: 100%; /* 画像が画面幅を超えないようにする */
+    width:80%;
+    height: auto;
+}
+
+#Home_image .absolute {
+    position: absolute;
+    top: 50%; /* Home.pngの上下真ん中に配置 */
+    left: 50%; /* Home.pngの左右真ん中に配置 */
+    transform: translate(-50%, -50%); /* 要素自身の中心を基準に位置調整 */
+    width: 80%; /* 画面の80%の大きさに設定 */
+}
+h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 80px;
+}
+
+#about p{
+    display: block;
+    font-size: 20px;
+    max-width: 80%; /* 適切な幅に設定 */
+    margin: 0 auto; /* 水平方向の真ん中に配置 */
+    text-align: center;
+}
+
+/* コース一覧 */
+/* タイトルのスタイル設定 */
+
+/* 各コースのスタイル設定 */
+.course {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.course img {
+    width: 30%;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    object-fit: cover;
+}
+
+.course p {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    text-align: center;
+    margin: auto 0;  /* 水平方向の真ん中に配置 */
+}
+
+.course p span{
+    display: inline-block;
+    font-size: 40px;
+    margin-bottom: 70px;
+}
+
+/* 初心者向けコースと上級者向けコースのスタイル設定 */
+.course.beginner, .course.advanced {
+    flex-direction: row;
+}
+.course.beginner{
+    background-color: #3498db;
+}
+
+.course.beginner img, .course.advanced img {
+    order: 0;
+}
+
+/* 中級者向けコースのスタイル設定 */
+.course.intermediate {
+    flex-direction: row-reverse;
+    background-color: #451;
+}
+.course.course.advanced{
+    background-color: #888;
+}
+
+/* 申し込み */
+#apply {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+
+.apply-button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #f04;
+    padding: 50px 100px;
+    margin:auto;
+    font-size: 40px;
+    border-radius: 80px;
+}
+
+/* 教室紹介 */
+
+#classroom h3 {
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    padding-bottom: 40px;
+}
+
+.facilities-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.facility {
+    display: inline-block;
+    width: 30%;
+    margin-right: 20px;
+}
+
+.facility img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+#classroom .facility h3 {
+    text-align: center;
+    font-size: 25px;
+    margin: 0;
+    padding-bottom: 40px;
+}
+
+#classroom .facility p {
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    padding-bottom: 40px;
+}
+#instructors{
+    background-color: #451;
+}
+.instructor_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* 講師紹介 */
+.instructor {
+    display: inline-block;
+    width: 30%;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+ 
+}
+#instructors h3 {
+    font-size: 25px;
+    margin: 0;
+    padding-bottom: 40px;
+}
+.instructor img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid orange;
+}
+
+.line-bc {
+    padding: 20px 10px;
+    max-width: 1000px;
+    margin: 0px auto;
+    text-align: right;
+    font-size: 14px;
+    background: #7da4cd;
+  }
+  
+  /*以下、②左側のコメント*/
+  .balloon6 {
+    width: 100%;
+    margin: 10px 0;
+    overflow: hidden;
+  }
+  
+  .balloon6 .faceicon {
+    float: left;
+    margin-right: -100px;
+    width: 40px;
+  }
+  
+  .balloon6 .faceicon img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .balloon6 .chatting {
+    width: 100%;
+    text-align: left;
+  }
+  .says {
+    display: inline-block;
+    position: relative; 
+    margin: 10px 0 10px 60px;
+    padding: 10px;
+    max-width: 250px;
+    border-radius: 12px;
+    background: #edf1ee;
+  }
+  
+  .says:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 3px; 
+    left: -19px;
+    border: 8px solid transparent;
+    border-right: 18px solid #edf1ee;
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+  }
+  .says p {
+    margin: 0;
+    padding: 0;
+  }
+
+/* 受講生の声・体験談 */
+#testimonials {
+    background-color: blue;
+    padding: 50px 0;
+}
+
+#testimonials h2 {
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* 吹き出しデザイン */
+.testimonial {
+    display: block;
+    margin: 20px;
+    padding: 20px;
+    position: relative;
+    background-color: limegreen;
+    border-radius: 10px;
+    max-width: 60%;
+}
+
+/* テキストの色を白に */
+.testimonial p {
+    position: relative;
+    display: inline-block;
+    margin: 1.5em 15px 1.5em 0;
+    padding: 0 5px;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+    background: #a58eff;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+/* 吹き出しのしっぽ部分（左下に変更） */
+.testimonial::before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    margin-top: -15px;
+    border: 15px solid transparent;
+    border-left: 15px solid #a58eff;
+    z-index: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* 地図 */
+
+#map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#map h2{
+    text-align: center;
+    width: 100%;
+}
+#map iframe {
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+}
+
+/* News */
+#news {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:80%;
+}
+.news-list{
+    list-style: none outside;
+    margin: 0;
+    padding: 0;
+}
+.news-list .item a{
+display: flex;
+flex-wrap: wrap;
+flex-wrap: nowrap;
+text-decoration: none;
+color: #333;
+border-bottom: 1px solid #CCC;
+padding: 20px 20px;
+}
+.news-list .item:first-child a{
+border-top: 1px solid #CCC;
+}
+.news-list .item .date{
+margin: 0;
+min-width: 140px;
+font-size: 16px;
+color: #999;
+padding: 0 20px 0 0;
+}
+.news-list .item .category{
+margin: 0;
+min-width: 140px;
+padding: 0 20px 0 0;
+}
+.news-list .item .category span{
+background: #999;
+color: #FFF;
+text-align: center;
+display: inline-block;
+padding: 5px 20px;
+font-size: 12px;
+line-height: 1;
+}
+.news-list .item .title{
+margin: 0;
+width: 100%;
+}
+.news-list .item a:hover .title{
+color: #00F;
+}
+
+@media screen and (max-width: 767px){
+    .news-list .item a{
+    flex-wrap: wrap;
+    }
+    .news-list .item .date{
+    min-width: 100px;
+    }
+    .news-list .item .title{
+    margin-top: 10px;
+    }
+}
+  
+
+/* SNSリンク・フォローボタン */
+#sns-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding : 20px 0 ;
+}
+
+#sns-links img {
+    display: inline-block;
+    padding: 0;
+    margin: 0 25px;
+    text-decoration: none;
+}
+
+/* フッター */
+footer {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
